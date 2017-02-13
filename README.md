@@ -10,3 +10,14 @@
 
 
 There are a couple of areas where the code warrants review for further optimization. Currently, each pixel is iterated over in a single "for-loop". I have not optimized this with gcc nor have I explored SIMD calculations to see if that could speed up the process. 
+
+Example usage:
+
+./hdrgenerator ./SourceFolder/ -r FULL -c 2020 -y 263 -d 1634 -m /path/to/files/tocheck
+
+the -r flag specifies FULL range
+the -c flag specifies the color space
+the -y flag is the begininning of the content material
+the -d flag is the length in pixels of the content material
+the -m flag is the path to a text file that specifies the files that must be checked
+(at present only the last path component is verified, not the complete path)
